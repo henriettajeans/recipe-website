@@ -37,7 +37,7 @@ html {
   --high-resolution: 900px;
   /* FONTS */
 
-  --font-size-p: clamp(0.5rem, 1.5vw, 2.5rem);
+  --font-size-p: clamp(1rem, 1.5vw, 2.5rem);
   /* Moirai One: CSS class */
 
   .moirai-one-regular {
@@ -193,8 +193,8 @@ nav {
 
   .link {
     padding: 0.2em 1.2em 0.2em 1.2em;
-    width: 15%;
-    border-radius: 5px;
+    width: clamp(5rem, 10vw, 20rem);
+    border-radius: 20px;
     background-color: var(--log-btn);
     border: none;
     font-family: var(--title-font);
@@ -294,6 +294,10 @@ main {
         overflow: hidden;
         max-width: 100%;
         padding: 0.4rem 0.4rem 0.2rem 0.8rem;
+
+        @media (max-width: 500px) {
+          width: 80vw;
+        }
       }
     }
   }
