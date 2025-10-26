@@ -116,9 +116,6 @@ img {
     padding: 1em;
   }
 
-
-
-
   .image-section {
     flex-wrap: wrap;
     height: 100%;
@@ -138,5 +135,18 @@ img {
     display: inline;
     justify-content: space-between;
     padding: 0.2em;
+  }
+}
+
+.content {
+  display: grid;
+}
+
+.content-card_header_link {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: rgb(187, 55, 55) 2px underline;
   }
 }
