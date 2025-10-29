@@ -64,7 +64,7 @@ nav {
 
 
 img {
-  width: 250px;
+  max-width: 100%;
   object-fit: cover;
   height: 250px;
 }
@@ -99,15 +99,44 @@ img {
 
 .content {
   display: grid;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+  ;
   grid-template-rows: auto auto auto auto;
-  width: 70vw;
+  /* width: 70vw; */
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
 
 
   .content-card {
-    /* width: 40vw; */
+    padding: 2rem;
+
+    /* .content-card_header_img-wrapper:nth-child(2) {
+      text-decoration: red 1px underline;
+    } */
+
+    .content-card_header {
+      display: grid;
+
+      grid-template-areas: "image" "head";
+
+    }
+
+    .content-card_header_img-wrapper:nth-child(2) {
+      border: 2px solid green;
+      grid-row: image;
+    }
+
+
+    .content-card_header_img-wrapper {
+      border: 1px dotted pink;
+    }
+
+    .content-card_header_img-wrapper_cap {
+      display: none;
+    }
 
 
 
