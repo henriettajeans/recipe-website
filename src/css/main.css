@@ -18,19 +18,17 @@ body {
   font-variation-settings:
     "wdth" 100;
     width: 70%;
-    margin-bottom: 2em;
+    
 }
 main{
     
 height: 100%;
 display: absolute;
 background-color: #FCFCFC;
+padding-bottom: 1.6em;
+margin-bottom: 2em;
+}
 
-}
-header{
-    /* width: 60vw; */
-    /* height: 40%; */
-}
 .hero-image{
     background-image: url("../assets/hero.jpg");
      background-position: center;
@@ -46,13 +44,18 @@ h1{
 }
 
 section{
-    padding: 2em;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-bottom: 0.8em;
 }
 ul, ol, li {
     margin-left: 0.6em;
 }
 h1, h2, p, ul, ol, li {
     padding:0.2em;
+}
+ p, ul, ol, li {
+    font-size: 16px;
 }
 
 .description{
