@@ -1,5 +1,6 @@
 * {
     margin: 0 auto;
+    box-sizing: border-box;
     
 }
 html{
@@ -85,3 +86,8 @@ width: 50%;
 object-fit: cover;
 }
 
+@media screen and (max-width: 600px) {
+  body{
+    width: 100%;
+  }
+}
