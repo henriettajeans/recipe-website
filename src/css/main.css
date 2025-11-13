@@ -88,6 +88,7 @@ object-fit: cover;
 @media screen and (max-width: 600px) {
   body{
     width: 100%;
+   
   }
 main{
     gap:0;
@@ -106,7 +107,7 @@ main{
   }
    .image-section{
     flex-wrap: wrap;
-    margin-bottom: 14em;
+     height:100%;
    }
    img{
     width: 100%;
