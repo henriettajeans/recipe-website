@@ -132,7 +132,7 @@ body {
 }
 
 main {
-  background-color: #FCFCFC;
+  background-color: var(--white);
 }
 
 .hero-image {
@@ -192,7 +192,7 @@ nav {
   }
 
   .link {
-    padding: 0.2em 1.2em 0.2em 1.2em;
+    padding: var(--space-xxs) 1.2em var(--space-xxs) 1.2em;
     width: clamp(5rem, 10vw, 20rem);
     border-radius: 20px;
     background-color: var(--log-btn);
@@ -255,7 +255,8 @@ main {
     .content-card {
       text-decoration: none;
       color: var(--darker-accent);
-      margin: 0px 0px var(--space-m) 0px;
+      margin: 0px var(--space-xxs) var(--space-m) var(--space-xxs);
+      /* padding: 2em; */
 
       .content-card_header {
         display: grid;
@@ -295,8 +296,8 @@ main {
         max-width: 100%;
         padding: 0.4rem 0.4rem 0.2rem 0.8rem;
 
-        @media (max-width: 500px) {
-          width: 80vw;
+        @media (min-width: 450px) and (max-width: 540px) {
+          width: 70vw;
         }
       }
     }
