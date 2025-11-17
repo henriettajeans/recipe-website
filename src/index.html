@@ -185,31 +185,32 @@
     </div>
     <div>
         <button onclick="document.getElementById('viewModal').showModal()">Öppna kontaktformulär</button>
-            <dialog id="viewModal">
-                <div>
-                    <h3>Kontaktformulär</h3>
-                    <button type="button" onclick="document.getElementById('viewModal').close()">X</button>
-                    <form>
-                <label for="user-name">Namn:
-                    <input type="text" name="username" id="user-name" placeholder="Donna Smith" required/>
-                </label>
-                <label for="user-email">Mejladress:
-                    <input type="email" name="email" id="user-email" placeholder="donna@mail.se" required/>
-                </label>
-                <label for="user-phone">Telefonnummer:
-                    <input type="tel" name="phone" id="user-phone" placeholder="073 073 73 73"/>
-                </label>
-                <label for="written-message">Meddelande:</label>
-                <textarea name="message" id="written-message" rows="4"></textarea>
-                <select name="role" id="web-role">
-                    <option value="" disabled selected>-Välj roll-</option>
-                    <option value="guest">Gäst</option>
-                    <option value="chef">Kock</option>
-                    <option value="baker">Bagare</option>
-                </select>
-                <button type="submit">Skicka meddelande</button>
-            </form>
-                </div>
+        <!-- <div class="modal-close" onclick="document.getElementById('viewModal').close()"></div>    -->
+        <dialog id="viewModal" class="modal-wrapper">
+                    <div class="modal-content">
+                        <h3>Kontaktformulär</h3>
+                        <button class="modal-content_close-btn" type="button" onclick="document.getElementById('viewModal').close()">X</button>
+                        <form class="modal-content_form">
+                            <label for="user-name">Namn:
+                                <input type="text" name="username" id="user-name" placeholder="Donna Smith" required/>
+                            </label>
+                            <label for="user-email">Mejladress:
+                                <input type="email" name="email" id="user-email" placeholder="donna@mail.se" required/>
+                            </label>
+                            <label for="user-phone">Telefonnummer:
+                                <input type="tel" name="phone" id="user-phone" placeholder="073 073 73 73"/>
+                            </label>
+                            <label for="written-message">Meddelande:</label>
+                            <textarea name="message" id="written-message" rows="4"></textarea>
+                            <select name="role" id="web-role">
+                                <option value="" disabled selected>-Välj roll-</option>
+                                <option value="guest">Gäst</option>
+                                <option value="chef">Kock</option>
+                                <option value="baker">Bagare</option>
+                            </select>
+                            <button class="modal-content_form_submit-btn" type="submit">Skicka meddelande</button>
+                        </form>
+                    </div>
             </dialog>
         </div>
 </footer>

@@ -77,13 +77,13 @@ h6 {
     isolation: isolate;
 }
 
-/* ul,
+ul,
 ol,
 li,
 a {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
     text-decoration: none;
 
-} */
+}
