@@ -259,20 +259,18 @@ main {
 
       .content-card_header_img-wrapper {
         grid-row: image;
-      }
-
-      .content-card_header_img-wrapper {
 
 
 
         .content-card_header_img-wrapper_img {
           aspect-ratio: 1;
-          width: 12rem;
+          width: clamp(20rem, 30vw, 25rem);
           object-fit: cover;
 
-          @media (max-width: 400px) {
+
+          /* @media (max-width: 550px) {
             width: 20rem;
-          }
+          } */
         }
       }
 
