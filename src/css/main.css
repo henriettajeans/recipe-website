@@ -142,6 +142,13 @@ img {
 
     .content-card_text {
       font-size: 16px;
+      text-overflow: ellipsis;
+      /* display: block; */
+      width: 30ch;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 1rem;
+      /* border: solid 1px #000; */
 
     }
   }
