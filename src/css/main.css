@@ -15,8 +15,8 @@ body {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  width: 70vw;
-
+  width: 100vw;
+  padding: 2rem;
 }
 
 main {
@@ -49,12 +49,7 @@ h2 {
 nav {
   display: flex;
   width: 100%;
-  /* align-items: center; */
 }
-
-/* p {
-  margin-top: 1em;
-} */
 
 .description {
   background-color: #EBEBEB;
@@ -73,10 +68,6 @@ img {
   body {
     width: 100%;
 
-  }
-
-  main {
-    gap: 0;
   }
 
   .hero-image {
@@ -105,13 +96,13 @@ img {
   ;
   grid-template-rows: auto auto auto auto;
   /* width: 70vw; */
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-items: center;
 
 
   .content-card {
-    padding: 2rem;
+    /* padding: 2rem; */
 
     /* .content-card_header_img-wrapper:nth-child(2) {
       text-decoration: red 1px underline;
@@ -143,13 +134,18 @@ img {
     .content-card_text {
       font-size: 16px;
       text-overflow: ellipsis;
-      /* display: block; */
       width: 30ch;
-      overflow: hidden;
-      white-space: nowrap;
-      padding: 1rem;
-      /* border: solid 1px #000; */
+      display: inline-block;
 
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      line-clamp: 3;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      /* padding: 1rem; */
+      /* background-color: aliceblue; */
+      max-width: 100%;
+      padding: 1rem 1rem 0 1rem;
     }
   }
 }
