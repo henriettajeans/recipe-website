@@ -19,6 +19,25 @@ body {
   padding: 2rem;
 }
 
+.hero-container {
+  position: relative;
+  text-align: left;
+
+  #hero-title {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-70%, -50%);
+    font-size: 50px;
+
+    p {
+      font-size: 20px;
+      font-style: italic;
+    }
+  }
+}
+
 main {
 
   height: 100%;
