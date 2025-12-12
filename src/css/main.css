@@ -16,7 +16,8 @@ body {
   font-variation-settings:
     "wdth" 100;
   width: 100vw;
-  padding: 2rem;
+  padding: 0rem 2rem 0rem 2rem;
+
 
 }
 
@@ -69,6 +70,15 @@ h2 {
 nav {
   display: flex;
   width: 100%;
+  align-items: center;
+  margin: 0.6rem;
+
+  .logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    color: #7c0c40;
+  }
 }
 
 .description {
@@ -138,7 +148,6 @@ img {
     }
 
     .content-card_header_img-wrapper:nth-child(2) {
-      border: 2px solid green;
       grid-row: image;
     }
 
@@ -179,5 +188,34 @@ img {
 
 
     text-decoration: rgb(187, 55, 55) 2px underline;
+  }
+}
+
+.link {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: pink;
+  color: rgb(95, 93, 93);
+  border: none;
+
+  &:hover {
+    box-shadow: 5px 5px 5px grey;
+  }
+
+  &:active {
+    box-shadow: 2px 2px 2px grey inset;
+  }
+}
+
+footer {
+  display: flex;
+  margin: 1em 0em 2em 0em;
+
+  li {
+    list-style: none;
+  }
+
+  .skiplink-wrapper {
+    margin-top: 1em;
   }
 }
