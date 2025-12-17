@@ -137,8 +137,34 @@
             </article>
          </a>
 
-    
+   
 </main>
+ <section class="form-wrapper">
+        <header class="form-header">
+            <h3>Formulär</h3>
+        </header>
+        <form>
+            <label for="user-name">Namn:
+                <input type="text" name="username" id="user-name" placeholder="Donna Smith" required/>
+            </label>
+            <label for="user-email">Mejladress:
+                <input type="email" name="email" id="user-email" placeholder="donna@mail.se" required/>
+            </label>
+            <label for="user-phone">Telefonnummer:
+                <input type="tel" name="phone" id="user-phone" placeholder="073 073 73 73"/>
+            </label>
+            <label for="written-message">Meddelande:</label>
+            <textarea name="message" id="written-message" rows="4"></textarea>
+            <select name="role" id="web-role">
+                <option value="" disabled selected>-Välj roll-</option>
+                <option value="guest">Gäst</option>
+                <option value="chef">Kock</option>
+                <option value="baker">Bagare</option>
+            </select>
+            <button type="submit">Skicka meddelande</button>
+        </form>
+
+    </section>
 <footer>
 <div>
     <ul aria-label="Kontaktsätt">
@@ -154,13 +180,7 @@
         <li></li>
     </ul>
     </div>
-    <!-- <div class="skiplink-wrapper">
-        <a class="link" href="#hero-title">
-            
-                Hoppa till start
-            
-        </a>
-    </div> -->
+    
 </footer>
 </body>
 </html>
