@@ -17,6 +17,7 @@ html {
   --accent-color: oklch(0.3858 0.1471 0.43);
   --darker-accent: oklch(0.3038 0.0543 0.43);
   --overlay: oklch(0.3862 0.1332 0.43 / 32.39%);
+  --modal-bg: oklch(92.502% 0.02085 17.26 / 0.994);
 
   /* Padding and margin */
   --space-xxs: 0.2rem;
@@ -27,9 +28,10 @@ html {
   --space-xl: 3rem;
 
   /* Screen sizes */
-
-  background-color: var(--bg-color);
-
+  --mobile: 400px;
+  --small-tablet: 580px;
+  --tablet: 760px;
+  --high-resolution: 900px
   /* FONTS */
 
   /* Moirai One: CSS class */
@@ -80,7 +82,8 @@ html {
   --title-font: "Londrina Shadow",
   sans-serif;
 
-
+  /* HTML style */
+  background-color: var(--bg-color);
 }
 
 body {
@@ -104,7 +107,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-70%, -50%);
-    font-size: 50px;
+    /* font-size: 50px; */
+    font-size: clamp(2rem, 4.5vw, 5.5rem);
 
     p {
       font-size: 20px;
@@ -179,19 +183,20 @@ nav {
 
   .link {
     padding: 0.2em 1.2em 0.2em 1.2em;
+    width: 15%;
     border-radius: 5px;
-    background-color: pink;
+    background-color: var(--modal-bg);
     color: rgb(95, 93, 93);
     border: none;
     font-family: var(--title-font);
 
     &:hover {
-      box-shadow: var(--space-xs) var(--space-xs) var(--space-xs) grey;
+      box-shadow: var(--space-xs) var(--space-xs) var(--space-xs) var(--accent-color);
       background-color: var(--hover-color);
     }
 
     &:active {
-      box-shadow: 2px 2px 2px grey inset;
+      box-shadow: 2px 2px 2px var(--accent-color) inset;
     }
   }
 }
@@ -313,6 +318,18 @@ footer {
   .skiplink-wrapper {
     margin-top: 1em;
   }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    gap: var(--space-s);
+
+  }
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    gap: var(--space-l)
+  }
+
 }
 
 
@@ -330,6 +347,149 @@ footer {
     left: 0;
   }
 }
+
+.contact-button {
+  border: none;
+  padding: 0.6em 1.2em 0.6em 1.2em;
+  background-color: var(--modal-bg);
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: var(--space-xs) var(--space-xs) var(--space-xs) var(--accent-color);
+    /* background-color: var(--hover-color); */
+  }
+
+  &:active {
+    box-shadow: 2px 2px 2px var(--accent-color) inset;
+  }
+}
+
+.modal-wrapper {
+  width: 60%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--modal-bg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .modal-content {
+    header {
+      display: flex;
+      margin: 0.6em 0 1em 5em;
+
+      .modal-content_close-btn {
+        border: none;
+        color: var(--bg-color);
+        background-color: var(--modal-bg);
+        margin-right: 0;
+        display: inline-block;
+
+        &:hover {
+          border-radius: 100px;
+          color: var(--modal-bg);
+          background-color: var(--accent-color);
+          box-shadow: 2px var(--space-xs) var(--space-xs) 2px var(--accent-color);
+          /* background-color: var(--hover-color); */
+        }
+
+        &:active {
+          box-shadow: 2px 2px 2px 2px var(--accent-color) inset;
+          border-radius: 100px;
+          color: var(--bg-color);
+          background-color: var(--modal-bg);
+        }
+      }
+    }
+
+    .modal-content_form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-m);
+      width: 100%;
+
+      label {
+        width: 100%
+      }
+
+      input {
+        width: 16em;
+
+      }
+
+      textarea {
+        width: 90%;
+      }
+
+      .modal-content_form_submit-btn {
+        padding: 0.6em 1.2em 0.6em 1.2em;
+        background-color: var(--dark-text);
+        color: var(--hover-color);
+        border: none;
+        border-radius: 10px;
+
+        &:hover {
+
+          box-shadow: 2px var(--space-xs) var(--space-xs) 2px var(--accent-color);
+          /* background-color: var(--hover-color); */
+        }
+
+        &:active {
+          box-shadow: 2px 2px 2px 2px var(--accent-color) inset;
+        }
+
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    /* background-color: aqua; */
+    width: 90vw;
+    /* background-color: aliceblue; */
+
+    header {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 1em 0;
+    }
+
+    .modal-content {
+
+
+      .modal-content_form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-s);
+        width: 90%;
+
+        /* label {
+          width: 70%;
+        } */
+
+        input {
+          width: 15em;
+          /* margin-right: 0; */
+
+        }
+
+        textarea {
+          width: 80%;
+          margin: 0;
+        }
+
+        select {
+          width: 15em;
+        }
+
+        /* .modal-content_form_submit-btn {
+          background-color: beige;
+        } */
+      }
+
+    }
+  }
+}
+
 
 /* .modal-close {
   width: 100vw;

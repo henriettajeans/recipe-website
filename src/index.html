@@ -8,6 +8,9 @@
      <meta name="description" content="Ett enkelt recept på pannkakor">
   <meta name="keywords" content="Recept, pannkaka, pannkakor">
   <meta name="author" content="Henrietta Jeansson">
+  <script
+      src="https://kit.fontawesome.com/93096c015c.js"
+      crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -184,12 +187,15 @@
         </ul>
     </div>
     <div>
-        <button onclick="document.getElementById('viewModal').showModal()">Öppna kontaktformulär</button>
+        <button onclick="document.getElementById('viewModal').showModal()" class="contact-button">Öppna kontaktformulär</button>
+        <!-- Close modal: skapa en annan div och get element by id på den. -->
         <!-- <div class="modal-close" onclick="document.getElementById('viewModal').close()"></div>    -->
         <dialog id="viewModal" class="modal-wrapper">
                     <div class="modal-content">
+                        <header>
                         <h3>Kontaktformulär</h3>
-                        <button class="modal-content_close-btn" type="button" onclick="document.getElementById('viewModal').close()">X</button>
+                        <button class="modal-content_close-btn" type="button" onclick="document.getElementById('viewModal').close()"><i class="fa-solid fa-rectangle-xmark fa-2xl"></i></button>
+                        </header>
                         <form class="modal-content_form">
                             <label for="user-name">Namn:
                                 <input type="text" name="username" id="user-name" placeholder="Donna Smith" required/>
@@ -202,12 +208,14 @@
                             </label>
                             <label for="written-message">Meddelande:</label>
                             <textarea name="message" id="written-message" rows="4"></textarea>
+                            <label>I vilken roll besöker du oss?
                             <select name="role" id="web-role">
                                 <option value="" disabled selected>-Välj roll-</option>
                                 <option value="guest">Gäst</option>
                                 <option value="chef">Kock</option>
                                 <option value="baker">Bagare</option>
                             </select>
+                            </label>
                             <button class="modal-content_form_submit-btn" type="submit">Skicka meddelande</button>
                         </form>
                     </div>
