@@ -6,8 +6,6 @@
 
 html {
 
-
-
   /* Varibles */
 
   /* Colors */
@@ -161,7 +159,9 @@ h3 {
 nav {
   display: flex;
   width: 100%;
+  gap: 1em;
   align-items: center;
+  justify-content: space-between;
   margin: var(--space-s);
 
   .logo {
@@ -178,7 +178,7 @@ nav {
   }
 
   .link {
-    padding: 1em;
+    padding: 0.2em 1.2em 0.2em 1.2em;
     border-radius: 5px;
     background-color: pink;
     color: rgb(95, 93, 93);
@@ -216,6 +216,8 @@ a {
 } */
 
 .nav_list {
+  /* width: 100%; */
+
   li {
     display: inline;
     padding: var(--space-xs);

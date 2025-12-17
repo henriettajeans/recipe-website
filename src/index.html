@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
      <meta name="description" content="Ett enkelt recept på pannkakor">
   <meta name="keywords" content="Recept, pannkaka, pannkakor">
@@ -166,50 +167,51 @@
 
     </section> -->
 <footer>
-<div>
-    <ul aria-label="Kontaktsätt">
-        <li>Telefon: 012-345 67 89</li>
-        <li>Mejl:</li>
-        <li></li>
-    </ul>
+    <div>
+        <h3>Kontaktuppgifter</h3>
+        <ul aria-label="Kontaktsätt">
+            <li>Telefon: 012-345 67 89</li>
+            <li>Mejl:</li>
+            <li></li>
+        </ul>
     </div>
     <div>
-    <ul aria-label="Länkar till fler recept-sidor">
-        <li>Husmors-recept</li>
-        <li></li>
-        <li></li>
-    </ul>
+        <h3>Fler tips och recept</h3>
+        <ul aria-label="Länkar till fler recept-sidor">
+            <li>Husmors-recept</li>
+            <li>Finska recept</li>
+            <li>Vegetariska kostråd</li>
+        </ul>
     </div>
-    
-    <button onclick="document.getElementById('viewModal').showModal()">Öppna kontaktformulär</button>
-        <dialog id="viewModal">
-            <div>
-                
-                <h3>Kontaktformulär</h3>
-                <button type="button" onclick="document.getElementById('viewModal').close()">X</button>
-                <form>
-            <label for="user-name">Namn:
-                <input type="text" name="username" id="user-name" placeholder="Donna Smith" required/>
-            </label>
-            <label for="user-email">Mejladress:
-                <input type="email" name="email" id="user-email" placeholder="donna@mail.se" required/>
-            </label>
-            <label for="user-phone">Telefonnummer:
-                <input type="tel" name="phone" id="user-phone" placeholder="073 073 73 73"/>
-            </label>
-            <label for="written-message">Meddelande:</label>
-            <textarea name="message" id="written-message" rows="4"></textarea>
-            <select name="role" id="web-role">
-                <option value="" disabled selected>-Välj roll-</option>
-                <option value="guest">Gäst</option>
-                <option value="chef">Kock</option>
-                <option value="baker">Bagare</option>
-            </select>
-            <button type="submit">Skicka meddelande</button>
-        </form>
-            </div>
-        </dialog>
-    
+    <div>
+        <button onclick="document.getElementById('viewModal').showModal()">Öppna kontaktformulär</button>
+            <dialog id="viewModal">
+                <div>
+                    <h3>Kontaktformulär</h3>
+                    <button type="button" onclick="document.getElementById('viewModal').close()">X</button>
+                    <form>
+                <label for="user-name">Namn:
+                    <input type="text" name="username" id="user-name" placeholder="Donna Smith" required/>
+                </label>
+                <label for="user-email">Mejladress:
+                    <input type="email" name="email" id="user-email" placeholder="donna@mail.se" required/>
+                </label>
+                <label for="user-phone">Telefonnummer:
+                    <input type="tel" name="phone" id="user-phone" placeholder="073 073 73 73"/>
+                </label>
+                <label for="written-message">Meddelande:</label>
+                <textarea name="message" id="written-message" rows="4"></textarea>
+                <select name="role" id="web-role">
+                    <option value="" disabled selected>-Välj roll-</option>
+                    <option value="guest">Gäst</option>
+                    <option value="chef">Kock</option>
+                    <option value="baker">Bagare</option>
+                </select>
+                <button type="submit">Skicka meddelande</button>
+            </form>
+                </div>
+            </dialog>
+        </div>
 </footer>
 </body>
 </html>
