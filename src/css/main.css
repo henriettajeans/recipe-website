@@ -95,7 +95,11 @@ body {
   font-variation-settings:
     "wdth" 100;
   width: 100vw;
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 0 var(--space-l) 0 var(--space-l);
+
+  @media (max-width: 400px) {
+    padding: 0 var(--space-xs) 0 var(--space-xs);
+  }
 }
 
 .hero-container {
@@ -138,7 +142,6 @@ main {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  height: 300px;
 }
 
 .hero-div {
@@ -185,8 +188,6 @@ nav {
     &:hover {
       color: var(--hover-color);
     }
-
-
   }
 
   .link {
@@ -197,7 +198,6 @@ nav {
     color: rgb(95, 93, 93);
     border: none;
     font-family: var(--title-font);
-
     font-size: var(--font-size-p);
 
     &:hover {
@@ -211,24 +211,9 @@ nav {
   }
 }
 
-
 a {
   text-decoration: none;
 }
-
-/* @media screen and (max-width: 600px) {
-  body {
-    width: 100%;
-
-  }
-
-  .hero-image {
-    height: 400px;
-    width: 100vw;
-
-  }
-
-} */
 
 .nav_list {
   /* width: 100%; */
@@ -282,8 +267,12 @@ main {
 
         .content-card_header_img-wrapper_img {
           aspect-ratio: 1;
-          width: 200px;
+          width: 12rem;
           object-fit: cover;
+
+          @media (max-width: 400px) {
+            width: 20rem;
+          }
         }
       }
 
