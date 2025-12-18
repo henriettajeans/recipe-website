@@ -9,6 +9,8 @@ html {
   /* Varibles */
 
   /* Colors */
+  --white: oklch(96.346% 0.00319 15.323);
+  --black: oklch(9.988% 0.04099 29.223);
   --bg-color: oklch(0.4452 0.1827 29.23 / 30.2%);
   --hero-text-color: oklch(95.808% 0.00871 25.37 / 0.813);
   --dark-text: oklch(0.4452 0.1827 29.23);
@@ -18,6 +20,7 @@ html {
   --darker-accent: oklch(0.3038 0.0543 0.43);
   --overlay: oklch(0.3862 0.1332 0.43 / 32.39%);
   --modal-bg: oklch(92.502% 0.02085 17.26 / 0.994);
+  --log-btn: oklch(66.226% 0.09398 19.833 / 0.736);
 
   /* Padding and margin */
   --space-xxs: 0.2rem;
@@ -88,7 +91,6 @@ html {
 }
 
 body {
-  /* height: 100%; */
   font-family: var(--p-font);
   font-optical-sizing: auto;
   font-style: normal;
@@ -130,7 +132,6 @@ body {
 }
 
 main {
-  height: 100%;
   background-color: #FCFCFC;
 }
 
@@ -194,15 +195,19 @@ nav {
     padding: 0.2em 1.2em 0.2em 1.2em;
     width: 15%;
     border-radius: 5px;
-    background-color: var(--modal-bg);
-    color: rgb(95, 93, 93);
+    background-color: var(--log-btn);
     border: none;
     font-family: var(--title-font);
     font-size: var(--font-size-p);
 
+    a {
+      color: var(--dark-text);
+      font-weight: bold;
+    }
+
     &:hover {
-      box-shadow: var(--space-xs) var(--space-xs) var(--space-xs) var(--accent-color);
-      background-color: var(--hover-color);
+      box-shadow: 0 var(--space-xs) var(--space-xs) 0 var(--accent-color);
+      background-color: var(--log-btn);
     }
 
     &:active {
@@ -332,8 +337,8 @@ footer {
 
 .skiplink {
   display: inline-block;
-  color: #555;
-  background: #fff;
+  color: var(--black);
+  background: var(--white);
   padding: .5em;
   position: absolute;
   left: -99999rem;
@@ -353,7 +358,6 @@ footer {
 
   &:hover {
     box-shadow: var(--space-xs) var(--space-xs) var(--space-xs) var(--accent-color);
-    /* background-color: var(--hover-color); */
   }
 
   &:active {
@@ -426,23 +430,20 @@ footer {
         border-radius: 10px;
 
         &:hover {
-
           box-shadow: 2px var(--space-xs) var(--space-xs) 2px var(--accent-color);
-          /* background-color: var(--hover-color); */
         }
 
         &:active {
           box-shadow: 2px 2px 2px 2px var(--accent-color) inset;
+          background-color: var(--hover-color);
+          color: var(--dark-text);
         }
-
       }
     }
   }
 
   @media (max-width: 400px) {
-    /* background-color: aqua; */
     width: 90vw;
-    /* background-color: aliceblue; */
 
     header {
       display: flex;
@@ -451,17 +452,11 @@ footer {
     }
 
     .modal-content {
-
-
       .modal-content_form {
         display: flex;
         flex-direction: column;
         gap: var(--space-s);
         width: 90%;
-
-        /* label {
-          width: 70%;
-        } */
 
         input {
           width: 15em;
@@ -477,24 +472,8 @@ footer {
         select {
           width: 15em;
         }
-
-        /* .modal-content_form_submit-btn {
-          background-color: beige;
-        } */
       }
 
     }
   }
 }
-
-
-/* .modal-close {
-  width: 100vw;
-  height: 100vh;
-  background-color: red;
-  z-index: -10;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-70%, -50%);
-} */
