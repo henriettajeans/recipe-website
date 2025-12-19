@@ -99,8 +99,12 @@ body {
   width: 100vw;
   padding: 0 var(--space-l) 0 var(--space-l);
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     padding: 0 var(--space-xs) 0 var(--space-xs);
+  }
+
+  a {
+    color: var(--dark-text);
   }
 }
 
